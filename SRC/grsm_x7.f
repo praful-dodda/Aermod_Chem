@@ -4,9 +4,17 @@ C        GRSM_CALC Module of the AMS/EPA Regulatory Model - AERMOD
 C
 C        PURPOSE: Processes Hourly Results for GRSM Option
 C
+C        PROGRAMMER: CERC
+C
+C        DATE:    November 2020
+C
+C        MODIFIED: 
+C
 C        INPUTS:
 C
+C
 C        OUTPUTS:
+C
 C
 C        CALLED FROM:   HRLOOP, EV_LOOP, MAXDCALC
 C***********************************************************************
@@ -435,6 +443,10 @@ C        RxnRates Module of the AMS/EPA Regulatory Model - AERMOD
 C
 C        PURPOSE: Calculate the reaction rates for GRS chemistry
 C
+C        PROGRAMMER: CERC
+C
+C        DATE: November 2020
+C
 C        INPUTS:  
 C
 C        OUTPUTS: 
@@ -501,6 +513,10 @@ C        GETBDGEQUIL Module of the AMS/EPA Regulatory Model - AERMOD
 C
 C        PURPOSE: Calculate the equilibrium background for GRS chemistry
 C
+C        PROGRAMMER: CERC
+C
+C        DATE: November 2020
+C
 C        INPUTS:  
 C
 C        OUTPUTS:
@@ -554,6 +570,8 @@ C        QuadraticEquil Module of the AMS/EPA Regulatory Model - AERMOD
 C
 C        PURPOSE: Puts NO2, NO and O3 concentrations into photo-stationary
 C                 equilibrium, conserving mass of NOx and NO2 + O3
+C
+C        PROGRAMMER: CERC
 C
 C        DATE: November 2020
 C
@@ -702,6 +720,10 @@ C
 C        PURPOSE: Calculate the final concentrations after applying
 C                 GRSM chemistry scheme
 C
+C        PROGRAMMER: CERC
+C
+C        DATE: November 2020
+C
 C        INPUTS:  
 C
 C        OUTPUTS:
@@ -775,6 +797,10 @@ C                 If the error is too high, reduces the timestep and
 C                 tries again until error is below threshold. Also tries
 C                 to set a sensible timestep for the next time this
 C                 routine is called based on the magnitude of the error
+C
+C        PROGRAMMER: CERC
+C
+C        DATE: November 2020
 C
 C        INPUTS:  CLocal - Input concentrations
 C                 dCdt - Time derivatives of input concentrations
@@ -856,6 +882,10 @@ C        CashKarpRK Module of the AMS/EPA Regulatory Model - AERMOD
 C
 C        PURPOSE: Performs Runge-Kutta integration (Cash-Karp method) once
 C                 using input timestep. Also calculates error.
+C
+C        PROGRAMMER: CERC
+C
+C        DATE: November 2020
 C
 C        INPUTS:  C - Input concentrations
 C                 dCdt - Time derivatives of input concentrations
@@ -941,6 +971,10 @@ C***********************************************************************
 C        PLUMESIZES Module of the AMS/EPA Regulatory Model - AERMOD
 C
 C        PURPOSE: Gets the size of instantaneous & ensemble plumes at X
+C
+C        PROGRAMMER: CERC
+C
+C        DATE: November 2020
 C
 C        INPUTS:   XARG - downwind location
 C                  TIME - travel time to location 
@@ -1165,7 +1199,7 @@ C        Initialize PRM_FSTREC Logical Switch for First Receptor of Loop;
 
 CRJP
 CRJP     Calculate distance to uniformly mixed plume within the
-CRJP     boundary layer (XMIXED) after Turners Workbook (1970), page 7:
+CRJP     boundary layer (XMIXED) after Turner's Workbook (1970), page 7:
 CRJP     distance is approximately (Zi * UAVG)/SWAVG, where UAVG
 CRJP     and SWAVG are wind speed and sigma-w averaged over the depth
 CRJP     between the ground and Zi (or the plume height, if higher in

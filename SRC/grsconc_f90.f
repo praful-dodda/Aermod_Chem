@@ -2,9 +2,7 @@
 
       SUBROUTINE ZENANG(YR,JDAY,HR,OLAT,ZA)
 ! ----------------------------------------------------------------------------------- !
-!     Written by Alejandro Valencia (AMV)
-!
-!     RLINE v1.6, October 2015
+!     Written by xx (xx)
 !
 !     This code (ZENith ANGle) returns the zenith angle given latittude and time.
 ! ----------------------------------------------------------------------------------- !
@@ -13,10 +11,10 @@
         !-------------------------------------------------------------------------------
         ! argument list variables
         !-------------------------------------------------------------------------------
-
+        USE MAIN1
         use line_source_data, only: double, pi
         IMPLICIT NONE
-        
+        ! check aermod.f or meset.f 
         INTEGER,  INTENT(IN)   :: yr        ! Year
         INTEGER,  INTENT(IN)   :: jday      ! Day of Year
         INTEGER,  INTENT(IN)   :: hr        ! Hour 
@@ -66,29 +64,15 @@
         ! Elevation Angle    
         EA=90-ZA
 
-      END SUBROUTINE zenang
+      END SUBROUTINE ZENANG
 ! ----------------------------------------------------------------------------------- !
-! The Research LINE source (R-LINE) model is in continuous development by various     !
-! groups and is based on information from these groups: Federal Government employees, !
-! contractors working within a United States Government contract, and non-Federal     !
-! sources including research institutions.  These groups give the Government          !
-! permission to use, prepare derivative works of, and distribute copies of their work !
-! in the R-LINE model to the public and to permit others to do so.  The United States !
-! Environmental Protection Agency therefore grants similar permission to use the      !
-! R-LINE model, but users are requested to provide copies of derivative works or      !
-! products designed to operate in the R-LINE model to the United States Government    !
-! without restrictions as to use by others.  Software that is used with the R-LINE    !
-! model but distributed under the GNU General Public License or the GNU Lesser        !
-! General Public License is subject to their copyright restrictions.                  !
 ! ----------------------------------------------------------------------------------- !
 
 
       subroutine ierno2(zag,rk1)
       
 ! ----------------------------------------------------------------------------------- !
-!     Code adapted by Alejandro M. Valencia (AMV)     
-!    
-!     RLINE v1.6, October 2015
+!     Code adapted by xx (xx)     
 !
 !     This subroutine uses the zenith angle and calculates the surface short wave 
 !     flux to compute the no2 photolysis rate coefficient.  The rate coefficient
@@ -141,25 +125,12 @@
       
       end subroutine ierno2
 ! ----------------------------------------------------------------------------------- !
-! The Research LINE source (R-LINE) model is in continuous development by various     !
-! groups and is based on information from these groups: Federal Government employees, !
-! contractors working within a United States Government contract, and non-Federal     !
-! sources including research institutions.  These groups give the Government          !
-! permission to use, prepare derivative works of, and distribute copies of their work !
-! in the R-LINE model to the public and to permit others to do so.  The United States !
-! Environmental Protection Agency therefore grants similar permission to use the      !
-! R-LINE model, but users are requested to provide copies of derivative works or      !
-! products designed to operate in the R-LINE model to the United States Government    !
-! without restrictions as to use by others.  Software that is used with the R-LINE    !
-! model but distributed under the GNU General Public License or the GNU Lesser        !
-! General Public License is subject to their copyright restrictions.                  !
 ! ----------------------------------------------------------------------------------- !
-
 
         subroutine grates(zenith,temp,k,kp,activity)
  
 ! ----------------------------------------------------------------------------------- !
-!       Code adapted by Alejandro M. Valencia (AMV)
+!       Code adapted by xx (xx)
 !
 !       This routine calculates all photolytic and molar reaction
 !       rates for the GRS mechanism. It is based on the HYSPLIT's GRATES
@@ -204,18 +175,6 @@
 
         end subroutine GRATES
 ! ----------------------------------------------------------------------------------- !
-! The Research LINE source (R-LINE) model is in continuous development by various     !
-! groups and is based on information from these groups: Federal Government employees, !
-! contractors working within a United States Government contract, and non-Federal     !
-! sources including research institutions.  These groups give the Government          !
-! permission to use, prepare derivative works of, and distribute copies of their work !
-! in the R-LINE model to the public and to permit others to do so.  The United States !
-! Environmental Protection Agency therefore grants similar permission to use the      !
-! R-LINE model, but users are requested to provide copies of derivative works or      !
-! products designed to operate in the R-LINE model to the United States Government    !
-! without restrictions as to use by others.  Software that is used with the R-LINE    !
-! model but distributed under the GNU General Public License or the GNU Lesser        !
-! General Public License is subject to their copyright restrictions.                  !
 ! ----------------------------------------------------------------------------------- !
 
 SUBROUTINE GCHEM(DIFTM,CON,CON1,K,active1)
@@ -226,7 +185,7 @@ SUBROUTINE GCHEM(DIFTM,CON,CON1,K,active1)
 ! and later modified by G.D. Hess, BMRC, BoM, Melbourne, Australia.
 ! http://www.nco.ncep.noaa.gov/pmb/codes/nwprod/lib/sorc/arl_hysplit/grseqn.f
 ! 
-! Adapted to RLINE by Alejandro M. Valencia (AMV)
+! Adapted to RLINE by xx (xx)
 !
 !-----------------------------------------------------------------------------
  
